@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "astralenergy",
+  "version": "${version}",
+  "name": "Astral Energy",
+  "authors": [
+    "dookbold",
+    "riverdreams"
+  ],
+  "license": "GNU LGPL v3",
+  "icon": "assets/astralenergy/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.dookbold.astralenergy.AstralEnergy"
+    ]
+  },
+  "mixins": [
+    "astralenergy.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.8+build.189",
+    "fabric": "*",
+    "minecraft": "1.16-alpha.20.13.b"
+  }
+}
