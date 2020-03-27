@@ -12,7 +12,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.dookbold.astralenergy.AstralEnergy"
+      "com.github.dookbold.astralenergy.AstralEnergyMod"
     ]
   },
   "mixins": [
