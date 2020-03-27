@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020, Astral Energy contributors as found on the GitHub repository at https://github.com/dookbold/astral-energy.
+ * Copyright © 2020, Astral Energy contributors as found on the GitHub repository page, found at https://github.com/dookbold/astral-energy.
  * This file is part of Astral Energy.
  *
  * Astral Energy is free software: you can redistribute it and/or modify
