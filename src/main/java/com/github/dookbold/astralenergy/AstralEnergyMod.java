@@ -47,6 +47,7 @@ public class AstralEnergyMod implements ModInitializer {
         Registry.register(Registry.BLOCK, new Identifier(modid, "astral_bricks"), ASTRAL_BRICKS);
         Registry.register(Registry.BLOCK, new Identifier(modid, "astral_cracked_bricks"), ASTRAL_CRACKED_BRICKS);
         Registry.register(Registry.BLOCK, new Identifier(modid, "astral_mossy_bricks"), ASTRAL_MOSSY_BRICKS);
+        // Could be identifying, @TODO find out what this is for and remove it.
         Registry.register(Registry.ITEM, new Identifier(modid, "temporary_kobold"), TEMPORARY_KOBOLD);
         Registry.register(Registry.ITEM, new Identifier(modid, "stellarite_ingot"), STELLARITE_INGOT);
         Registry.register(Registry.ITEM, new Identifier(modid, "stellarite_nugget"), STELLARITE_NUGGET);
