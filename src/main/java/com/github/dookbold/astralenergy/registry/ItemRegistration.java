@@ -6,7 +6,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ItemRegistration {
-    public static final Item TEMPORARY_KOBOLD = register(new Item(defaultSettings()), "temporary_kobold");
     public static final Item STELLARITE_INGOT = register(new Item(defaultSettings()), "stellarite_ingot");
     public static final Item STELLARITE_NUGGET = register(new Item(defaultSettings()), "stellarite_nugget");
 
