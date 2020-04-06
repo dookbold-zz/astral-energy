@@ -1,4 +1,4 @@
-package com.github.dookbold.astralenergy.utility;
+package com.github.dookbold.astralenergy.utils;
 
 import net.minecraft.world.WorldView;
 
