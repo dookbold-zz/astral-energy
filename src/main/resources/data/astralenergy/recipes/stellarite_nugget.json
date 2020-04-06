@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": {
-    "item": "astralenergy:stellarite_ingot"
-  },
-  "result": "astralenergy:stellarite_nugget",
-  "count": 9
-}
