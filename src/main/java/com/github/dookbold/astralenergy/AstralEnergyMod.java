@@ -19,45 +19,30 @@
 
 package com.github.dookbold.astralenergy;
 
+import com.github.dookbold.astralenergy.registry.BlockRegistration;
+import com.github.dookbold.astralenergy.registry.ItemRegistration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.item.*;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class AstralEnergyMod implements ModInitializer {
-    public static final String modid = "astralenergy";
+    public static final String MOD_ID = "astralenergy";
     public static final ItemGroup ASTRAL_ENERGY_GROUP = FabricItemGroupBuilder.create(
-            new Identifier("astralenergy", "general"))
+            new Identifier(MOD_ID, "general"))
             .icon(() -> new ItemStack(Items.DAYLIGHT_DETECTOR))
             .build();
-    public static final Block ASTRAL_STONE = new Block(FabricBlockSettings.of(Material.STONE).build());
-    public static final Block ASTRAL_BRICKS = new Block(FabricBlockSettings.of(Material.STONE).build());
-    public static final Block ASTRAL_CRACKED_BRICKS = new Block(FabricBlockSettings.of(Material.STONE).build());
-    public static final Block ASTRAL_MOSSY_BRICKS = new Block(FabricBlockSettings.of(Material.STONE).build());
-    public static final Item TEMPORARY_KOBOLD = new Item(new Item.Settings().group(ASTRAL_ENERGY_GROUP));
-    public static final Item STELLARITE_INGOT = new Item(new Item.Settings().group(ASTRAL_ENERGY_GROUP));
-    public static final Item STELLARITE_NUGGET = new Item(new Item.Settings().group(ASTRAL_ENERGY_GROUP));
+
     @Override
     public void onInitialize() {
-        Registry.register(Registry.BLOCK, new Identifier(modid, "astral_stone"), ASTRAL_STONE);
-        Registry.register(Registry.BLOCK, new Identifier(modid, "astral_bricks"), ASTRAL_BRICKS);
-        Registry.register(Registry.BLOCK, new Identifier(modid, "astral_cracked_bricks"), ASTRAL_CRACKED_BRICKS);
-        Registry.register(Registry.BLOCK, new Identifier(modid, "astral_mossy_bricks"), ASTRAL_MOSSY_BRICKS);
-        // Could be identifying, @TODO find out what this is for and remove it.
-        Registry.register(Registry.ITEM, new Identifier(modid, "temporary_kobold"), TEMPORARY_KOBOLD);
-        Registry.register(Registry.ITEM, new Identifier(modid, "stellarite_ingot"), STELLARITE_INGOT);
-        Registry.register(Registry.ITEM, new Identifier(modid, "stellarite_nugget"), STELLARITE_NUGGET);
-        Registry.register(Registry.ITEM, new Identifier(modid, "astral_stone"),
-                new BlockItem(ASTRAL_STONE, new Item.Settings().group(ASTRAL_ENERGY_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(modid, "astral_bricks"),
-                new BlockItem(ASTRAL_BRICKS, new Item.Settings().group(ASTRAL_ENERGY_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(modid, "astral_cracked_bricks"),
-                new BlockItem(ASTRAL_CRACKED_BRICKS, new Item.Settings().group(ASTRAL_ENERGY_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier(modid, "astral_mossy_bricks"),
-                new BlockItem(ASTRAL_MOSSY_BRICKS, new Item.Settings().group(ASTRAL_ENERGY_GROUP)));
+        ItemRegistration.init();
+        BlockRegistration.init();
+
     }
 }
