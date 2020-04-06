@@ -19,18 +19,14 @@
 
 package com.github.dookbold.astralenergy;
 
-import com.github.dookbold.astralenergy.registry.BlockRegistration;
-import com.github.dookbold.astralenergy.registry.ItemRegistration;
+import com.github.dookbold.astralenergy.registry.AEBlockRegistration;
+import com.github.dookbold.astralenergy.registry.AEItemRegistration;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class AstralEnergyMod implements ModInitializer {
     public static final String MOD_ID = "astralenergy";
@@ -41,8 +37,8 @@ public class AstralEnergyMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ItemRegistration.init();
-        BlockRegistration.init();
+        AEItemRegistration.init();
+        AEBlockRegistration.init();
 
     }
 }

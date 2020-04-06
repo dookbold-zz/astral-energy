@@ -8,7 +8,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class BlockRegistration {
+public class AEBlockRegistration {
     public static final Block ASTRAL_STONE = register(new Block(FabricBlockSettings.of(Material.STONE).build()), "astral_stone");
     public static final Block ASTRAL_BRICKS = register(new Block(FabricBlockSettings.of(Material.STONE).build()), "astral_bricks");
     public static final Block ASTRAL_CRACKED_BRICKS = register(new Block(FabricBlockSettings.of(Material.STONE).build()), "astral_cracked_bricks");
@@ -18,8 +18,8 @@ public class BlockRegistration {
 
     private static Block register(Block block, String name) {
         Registry.register(Registry.BLOCK, new Identifier(AstralEnergyMod.MOD_ID, name), block);
-        BlockItem item = new BlockItem(block, ItemRegistration.defaultSettings());
-        ItemRegistration.register(item, name);
+        BlockItem item = new BlockItem(block, AEItemRegistration.defaultSettings());
+        AEItemRegistration.register(item, name);
         return block;
     }
 
